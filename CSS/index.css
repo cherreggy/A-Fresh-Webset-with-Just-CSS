@@ -1,0 +1,582 @@
+/* 入口部分-------------------------------------- */
+.entry {
+  height: 500px;
+  background-color: #f5f5f5;
+}
+
+.entry .container {
+  position: relative;
+  height: 500px;
+}
+/* Banner部分----------- */
+.entry .banner {
+  height: 500px;
+  overflow: hidden;
+}
+
+.entry .banner ul {
+  /* 使得轮播图在一行显示 */
+  width: 200%;
+}
+
+.entry .banner li {
+  float: left;
+}
+/* 左右箭头 */
+.entry .banner .prev,
+.entry .banner .next {
+  position: absolute;
+  width: 45px;
+  height: 44px;
+  left: 260px;
+  top: 228px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.2) url("../images/sprites.png") 14px -60px;
+}
+
+.entry .banner .next {
+  left: 1185px;
+  background: rgba(0, 0, 0, 0.2) url("../images/sprites.png") -22px -60px;
+}
+/* 指示器 */
+.entry .indicator {
+  position: absolute;
+  left: 680px;
+  bottom: 31px;
+}
+
+.entry .indicator li {
+  width: 9px;
+  height: 10px;
+  margin-right: 24px;
+  background-color: rgba(255, 255, 255, 0.43);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.entry .indicator .active {
+  background-color: rgba(255, 255, 255, 1);
+}
+/* 侧边导航 */
+.category {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 251px;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.category ul li {
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+}
+
+.category ul li a {
+  box-sizing: border-box;
+  display: block;
+  height: 50px;
+  width: 251px;
+  padding-left: 36px;
+  color: #fff;
+}
+
+.category ul li a:hover {
+  background-color: #27ba9b;
+}
+
+.category ul li a::after {
+  content: "";
+  position: absolute;
+  right: 19px;
+  top: 19px;
+  width: 6px;
+  height: 11px;
+  background: url(../images/sprites.png) -80px -110px;
+}
+
+.category ul li a span {
+  padding-left: 15px;
+  font-size: 14px;
+}
+/* 新鲜好物------------------------------------------------ */
+.new {
+  height: 520px;
+}
+/* 头部 */
+.new .new-hd,
+.recommend .rec-hd,
+.hot .hot-hd,
+.new-topics .topic-hd {
+  height: 114px;
+  line-height: 114px;
+}
+
+.new .new-hd h2,
+.recommend .rec-hd h2,
+.hot .hot-hd h2,
+.fresh .fresh-hd h2,
+.new-topics .topic-hd h2 {
+  float: left;
+  margin-right: 34px;
+  font-weight: 400;
+  font-size: 29px;
+}
+
+.new .new-hd span,
+.recommend .rec-hd span,
+.hot .hot-hd span {
+  color: #999;
+}
+
+.new .new-hd a,
+.recommend .rec-hd a,
+.fresh .fresh-hd .more,
+.new-topics .topic-hd a {
+  float: right;
+  color: #999;
+}
+
+.new .new-hd a::after,
+.recommend .rec-hd a::after,
+.fresh .fresh-hd .more::after,
+.new-topics .topic-hd a::after {
+  content: "";
+  display: inline-block;
+  margin-left: 13px;
+  width: 7px;
+  height: 13px;
+  background: url(../images/sprites.png) 0px -110px;
+  vertical-align: middle;
+}
+/* 内容 */
+.new .new-content {
+  height: 405px;
+  /* background-color: pink; */
+}
+
+.new .new-content ul li {
+  float: left;
+  position: relative;
+  margin-right: 8px;
+  width: 304px;
+  height: 405px;
+  background-color: #f0f9f4;
+  text-align: center;
+  line-height: 1;
+  transition: top 0.3s, box-shadow 0.3s;
+}
+
+.new .new-content ul li:hover {
+  top: -3px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.new .new-content ul li:last-child {
+  margin-right: 0;
+}
+
+.new .new-content ul li a img {
+  width: 304px;
+}
+
+.new .new-content ul li h3 {
+  font-size: 20px;
+  margin-top: 22px;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.new .new-content ul li .price {
+  font-size: 23px;
+  color: #9a2e1f;
+}
+
+.new .new-content ul li .price span {
+  font-size: 17px;
+}
+
+.new .new-content ul li .tag {
+  position: absolute;
+  left: 17px;
+  top: 18px;
+  padding-top: 7px;
+  width: 28px;
+  height: 52px;
+  line-height: 1;
+  font-size: 18px;
+  border: #27ba9b solid 1px;
+  border-radius: 3px;
+  color: #27ba9b;
+  box-sizing: border-box;
+}
+/* 人气推荐----------------------------------------------------- */
+.recommend {
+  height: 575px;
+  /* background-color: pink; */
+}
+/* 头部合并在了新鲜好物部分，因为结构很相似 */
+/* 内容部分 */
+.recommend .rec-content {
+  height: 461px;
+}
+
+.recommend .rec-content li {
+  position: relative;
+  float: left;
+  margin-right: 8px;
+  width: 304px;
+  height: 461px;
+  background-color: white;
+  line-height: 1;
+  text-align: center;
+  transition: top 0.3s, box-shadow 0.3s;
+}
+
+.recommend .rec-content li:hover {
+  top: -3px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.recommend .rec-content li:last-child {
+  margin-right: 0;
+}
+
+.recommend .rec-content li img {
+  width: 304px;
+}
+
+.recommend .rec-content li h3 {
+  font-size: 21px;
+  font-weight: 400;
+  margin-top: 22px;
+}
+
+.recommend .rec-content li p {
+  margin-top: 18px;
+  color: #999;
+}
+/* 热门品牌--------------------------------------------------- */
+.hot {
+  height: 466px;
+  background-color: #f5f5f5;
+}
+
+.hot .container {
+  position: relative;
+  height: 466px;
+}
+
+/* 头部内容仍然和之前的新鲜好物部分有相似的地方 */
+.hot .hot-hd .left {
+  position: absolute;
+  right: 51px;
+  top: 79px;
+  height: 20px;
+  width: 20px;
+  background: #e2e2e2 url(../images/sprites.png) -32px -106px;
+  transform: rotateY(180deg);
+}
+
+.hot .hot-hd .right {
+  position: absolute;
+  right: 20px;
+  top: 79px;
+  height: 20px;
+  width: 20px;
+  background: #e2e2e2 url(../images/sprites.png) -32px -106px;
+}
+
+.hot .hot-hd .left:hover,
+.hot .hot-hd .right:hover {
+  background-color: #27ba9b;
+}
+/* 内容部分 */
+.hot .hot-content li {
+  position: relative;
+  float: left;
+  margin-right: 5px;
+  width: 244px;
+  height: 306px;
+  transition: top 0.3s, box-shadow 0.3s;
+}
+
+.hot .hot-content li:hover {
+  top: -3px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hot .hot-content li:last-child {
+  margin-right: 0;
+}
+
+.hot .hot-content li img {
+  width: 244px;
+}
+/* 生鲜商品----------------------------------------------------- */
+.fresh {
+  height: 706px;
+}
+
+/* 头部 */
+.fresh .fresh-hd {
+  height: 96px;
+  line-height: 96px;
+}
+
+.fresh .fresh-hd ul {
+  float: right;
+  margin-top: 36px;
+  margin-right: 52px;
+}
+
+.fresh .fresh-hd ul li {
+  float: left;
+}
+
+.fresh .fresh-hd ul li a {
+  display: block;
+  height: 20px;
+  padding: 2px 7px;
+  margin-right: 6px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.fresh .fresh-hd ul li a:hover {
+  color: #fff;
+  background-color: #27ba9b;
+}
+/* 内容 */
+.fresh .fresh-content .left {
+  width: 240px;
+  height: 610px;
+}
+
+.fresh .fresh-content .right {
+  width: 1000px;
+  height: 610px;
+  overflow: hidden;
+}
+
+.fresh .fresh-content .left img {
+  width: 240px;
+}
+
+.fresh .fresh-content .right li {
+  position: relative;
+  float: left;
+  margin-left: 8px;
+  margin-bottom: 3px;
+  padding-top: 8px;
+  padding-left: 29px;
+  width: 242px;
+  height: 304px;
+  border: #fff solid 2px;
+  box-sizing: border-box;
+  /* background-color: pink; */
+  overflow: hidden;
+}
+
+/* li鼠标滑过动画 */
+.fresh .fresh-content .right li .detail {
+  position: absolute;
+  left: 0;
+  bottom: -84px;
+  width: 240px;
+  height: 84px;
+  background-color: #27ba9b;
+  text-align: center;
+  transition: bottom 0.3s;
+  line-height: 1;
+}
+
+.fresh .fresh-content .right li .detail p a {
+  display: inline-block;
+  margin-top: 19px;
+  margin-bottom: 7px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.fresh .fresh-content .right li .detail span a {
+  display: inline-block;
+  padding-top: 8px;
+  width: 125px;
+  height: 21px;
+  border-top: 2px solid #a9dbcc;
+  color: #fff;
+  font-size: 13px;
+}
+
+.fresh .fresh-content .right li:hover {
+  border-color: #27ba9b;
+}
+
+.fresh .fresh-content .right li:hover .detail {
+  bottom: 0;
+}
+
+.fresh .fresh-content .right li img {
+  width: 184px;
+  height: 184px;
+}
+
+.fresh .fresh-content .right li p:last-child {
+  font-size: 25px;
+  color: #9a2e1f;
+}
+
+.fresh .fresh-content .right li p:last-child span {
+  font-size: 17px;
+}
+/* 最新专题部分---------------------------------------- */
+.new-topics {
+  margin-top: 53px;
+  height: 512px;
+  background-color: #f5f5f5;
+}
+/* 头部和前面仍然有相似的地方 */
+/* 内容部分 */
+.new-topics .topic-content {
+  height: 356px;
+}
+
+.new-topics .topic-content ul {
+  height: 356px;
+}
+
+.new-topics .topic-content li {
+  position: relative;
+  float: left;
+  margin-right: 14px;
+  height: 356px;
+  width: 404px;
+  background-color: #fff;
+}
+
+.new-topics .topic-content li:hover .descrip {
+  visibility: visible;
+}
+
+.new-topics .topic-content li::before {
+  position: absolute;
+  bottom: 70px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 356px;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8),
+    transparent 50%
+  );
+  visibility: hidden;
+}
+
+.new-topics .topic-content li:hover::before,
+.new-topics .topic-content li:hover .price {
+  visibility: visible;
+}
+
+.new-topics .topic-content li:last-child {
+  margin-right: 0;
+}
+
+.new-topics .topic-content li img {
+  width: 404px;
+}
+
+.new-topics .topic-content .descrip {
+  position: absolute;
+  left: 0;
+  bottom: 67px;
+  height: 66px;
+  width: 404px;
+  padding-left: 15px;
+  line-height: 1;
+  visibility: hidden;
+}
+
+.new-topics .topic-content .descrip p {
+  margin-bottom: 13px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.new-topics .topic-content .descrip p:last-child {
+  font-size: 16px;
+  color: #999;
+}
+
+.new-topics .topic-content .price {
+  position: absolute;
+  right: 15px;
+  bottom: 96px;
+  width: 81px;
+  height: 27px;
+  background-color: #fff;
+  color: #9a2e1f;
+  text-align: center;
+  line-height: 27px;
+  visibility: hidden;
+}
+
+.new-topics .topic-content .price span {
+  font-size: 12px;
+}
+
+.new-topics .topic-content li .like,
+.new-topics .topic-content li .look,
+.new-topics .topic-content li .comment {
+  float: left;
+  line-height: 1;
+  margin-top: 27px;
+  cursor: default;
+}
+
+.new-topics .topic-content li .like {
+  margin-left: 34px;
+}
+
+.new-topics .topic-content li .like::before {
+  content: "";
+  display: inline-block;
+  margin-right: 2px;
+  width: 15px;
+  height: 13px;
+  background: url(../images/sprites.png) -120px -110px;
+  cursor: pointer;
+}
+
+.new-topics .topic-content li .like:hover::before {
+  background: url(../images/sprites.png) -240px -110px;
+}
+
+.new-topics .topic-content li .look {
+  margin-left: 24px;
+}
+
+.new-topics .topic-content li .look::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 12px;
+  background: url(../images/sprites.png) -160px -110px;
+}
+
+.new-topics .topic-content li .comment {
+  margin-left: 182px;
+}
+
+.new-topics .topic-content li .comment::before {
+  content: "";
+  display: inline-block;
+  margin-right: 4px;
+  width: 16px;
+  height: 16px;
+  background: url(../images/sprites.png) -200px -110px;
+  vertical-align: middle;
+  cursor: pointer;
+}

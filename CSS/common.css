@@ -1,0 +1,364 @@
+/* 版心 */
+.container {
+  width: 1240px;
+  margin: 0 auto;
+}
+
+/* 快捷导航 */
+.shortcut {
+  height: 52px;
+  background-color: #333;
+  color: #666;
+}
+
+.shortcut .container {
+  height: 52px;
+}
+
+.shortcut .container li {
+  float: left;
+  line-height: 52px;
+}
+
+.shortcut .container a {
+  margin: 0 16px;
+  color: #dcdcdc;
+  font-size: 14px;
+}
+
+.shortcut li:last-child a {
+  margin-right: 0;
+}
+
+.shortcut a:hover {
+  color: #27ba9b;
+}
+
+.shortcut .mobile::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 20px;
+  margin-right: 6px;
+  background: url("../images/sprites.png") -160px -70px;
+  vertical-align: middle;
+}
+
+/* 主导航 */
+.nav {
+  height: 100px;
+  padding-top: 30px;
+}
+
+.nav .logo {
+  width: 207px;
+  height: 70px;
+  margin-right: 40px;
+}
+
+.nav .logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("../images/logo.png") no-repeat;
+  background-size: 100%;
+  font-size: 0;
+}
+
+.nav nav ul li {
+  float: left;
+  line-height: 70px;
+  margin-right: 48px;
+}
+
+.nav nav ul li:last-child {
+  margin-right: 84px;
+}
+
+.nav nav ul li a:hover {
+  padding-bottom: 7px;
+  border-bottom: 1px solid #27ba9b;
+  color: #27ba9b;
+}
+
+.nav .search {
+  position: relative;
+  width: 172px;
+  height: 30px;
+  margin-top: 24px;
+}
+
+.nav .search::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  right: 0;
+  width: 18px;
+  height: 18px;
+  background: url("../images/sprites.png") -79px -69px;
+}
+
+.nav .search input {
+  width: 172px;
+  height: 30px;
+  border-bottom: 2px solid #e7e7e7;
+  padding-left: 29px;
+}
+
+.nav .search input::placeholder {
+  color: #ccc;
+}
+
+.nav .cart {
+  position: relative;
+  height: 23px;
+  width: 23px;
+  margin-left: 15px;
+  margin-top: 28px;
+  background: url("../images/sprites.png") -119px -69px;
+}
+
+.nav .cart span {
+  position: absolute;
+  right: -12px;
+  top: -5px;
+  height: 15px;
+  width: 20px;
+  background-color: #e26237;
+  border-radius: 8px;
+  line-height: 15px;
+  text-align: center;
+  color: white;
+  font-size: 13px;
+}
+
+.contact {
+  height: 302px;
+}
+
+.contact .container {
+  height: 302px;
+  padding-top: 70px;
+  box-sizing: border-box;
+  /* background-color: pink; */
+}
+
+.contact .container dl {
+  float: left;
+  width: 25%;
+  height: 189px;
+  /* background-color: green; */
+  text-align: center;
+  box-sizing: border-box;
+  line-height: 1;
+}
+
+.contact .container dt {
+  height: 51px;
+  color: #999;
+  margin-top: 9px;
+}
+
+.contact .container dd {
+  display: inline-block;
+  vertical-align: top;
+}
+/* 客户服务部分 */
+.contact .customer dd {
+  width: 93px;
+  height: 92px;
+  border: 1px solid #eeeeee;
+  color: #999999;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.contact .customer .chat {
+  margin-right: 6px;
+}
+
+.contact .chat::before {
+  content: "";
+  display: block;
+  width: 29px;
+  height: 27px;
+  margin: 22px auto 10px;
+  background: url("../images/sprites.png") -250px -70px;
+}
+
+.contact .chat:hover::before {
+  background-position: -205px -70px;
+}
+
+.contact .feedback::before {
+  content: "";
+  display: block;
+  height: 29px;
+  width: 29px;
+  margin: 23px auto 10px;
+  background: url("../images/sprites.png") -350px -70px;
+}
+
+.contact .feedback:hover::before {
+  background-position: -300px -70px;
+}
+/* 关注我们部分 */
+.contact .website dd {
+  width: 93px;
+  height: 92px;
+  border: 1px solid #eeeeee;
+  color: #999999;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.contact .website .wechat {
+  margin-right: 7px;
+}
+
+.contact .website .wechat::before {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 29px;
+  margin: 19px auto 11px;
+  background: url("../images/sprites.png") -250px -15px;
+}
+
+.contact .website .wechat:hover::before {
+  background: url("../images/sprites.png") -205px -15px;
+}
+
+.contact .website .weebo::before {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 29px;
+  margin: 19px auto 11px;
+  background: url("../images/sprites.png") -350px -15px;
+}
+
+.contact .website .weebo:hover::before {
+  background: url("../images/sprites.png") -300px -15px;
+}
+
+/* 下载APP部分 */
+.contact .download .code {
+  box-sizing: border-box;
+  width: 116px;
+  height: 116px;
+  padding: 7px;
+  margin-right: 22px;
+  border: 1px solid #eee;
+  text-align: center;
+}
+.contact .download .code img {
+  width: 100%;
+  height: 100%;
+}
+
+.contact .download .detail p {
+  font-size: 14px;
+  color: #999;
+  text-align: left;
+}
+
+.contact .download .detail p:nth-child(1) {
+  margin-top: 13px;
+  margin-bottom: 8px;
+}
+
+.contact .download .detail p:nth-child(2) {
+  margin-bottom: 18px;
+}
+
+.contact .download .detail a {
+  display: block;
+  width: 103px;
+  height: 32px;
+  background-color: #27ba9b;
+  line-height: 32px;
+  color: white;
+  font-size: 14px;
+  transition: border-radius 0.3s;
+}
+
+.contact .download .detail a:hover {
+  border-radius: 10px;
+}
+
+/* 服务热线 */
+.hotline {
+  border-left: 2px solid #f2f2f2;
+}
+.hotline p:nth-child(1) {
+  margin-top: 33px;
+  padding-bottom: 17px;
+  font-size: 22px;
+  font-family: "PingFangSC-Semibold";
+  color: #666;
+}
+
+.hotline p:nth-child(2) {
+  font-size: 15px;
+  color: #999;
+}
+
+/* 宣传服务部分------------------------------------- */
+.service {
+  height: 172px;
+  background-color: #333;
+}
+
+.service .container {
+  height: 172px;
+  box-sizing: border-box;
+  border-bottom: 3px solid #434343;
+}
+
+.service .container a {
+  float: left;
+  width: 33.33%;
+  height: 171px;
+  font-size: 28px;
+  color: white;
+  text-align: center;
+  line-height: 171px;
+}
+
+.service .container a::before {
+  content: "";
+  display: inline-block;
+  margin-right: 20px;
+  width: 58px;
+  height: 58px;
+  background-color: blue;
+  background: url("../images/sprites.png") 0px 0px;
+  vertical-align: middle;
+}
+
+.service .container a:nth-child(2):before {
+  background-position: -65px 0;
+}
+
+.service .container a:nth-child(3):before {
+  background-position: -130px 0;
+}
+/* 版权部分----------------------------------------- */
+.copyright {
+  height: 170px;
+  padding-top: 40px;
+  background-color: #333;
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.copyright a {
+  color: #999;
+}
+
+.copyright p:first-child {
+  height: 34px;
+}
